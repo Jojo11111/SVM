@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 x = np.array([[3, 7], [6, 6], [4, 6], [5, 6.5], [1, 2], [3, 5], [7, 3], [3, 4], [6, 2.7], [4, 3], [2, 7]])
 y = np.array([0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1])
 
-# clf = svm.SVC(C = 10.0,kernel='rbf')
 clf = svm.SVC(C=10.0, kernel='poly', degree=3)
 clf.fit(x, y)
 
@@ -28,5 +27,4 @@ Z = Z.reshape(xx.shape)
 plt.contourf(xx, yy, Z, cmap=plt.cm.winter)
 plt.scatter(clf.support_vectors_[:, 0], clf.support_vectors_[:, 1], s=80, c='k')
 plt.scatter(x[:, 0], x[:, 1], c=y, cmap=plt.cm.spring)
-
 plt.show()
