@@ -29,5 +29,4 @@ plt.plot(xx, yy_down, c='g')
 plt.plot(xx, yy_up, c='b')
 plt.scatter(clf.support_vectors_[:, 0], clf.support_vectors_[:, 1], s=80, c='r')
 plt.scatter(x[:, 0], x[:, 1], c=y, cmap=plt.cm.winter)
-
 plt.show()
